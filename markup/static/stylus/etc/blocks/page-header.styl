@@ -1,0 +1,511 @@
+.ui-timepicker-standard
+  z-index 10 !important
+
+.page-header
+  .top
+    padding-top 17px
+    .container
+      display flex
+      justify-content space-between
+      padding-left: 1%;
+      box-sizing: border-box;
+      align-items center
+    .telephone
+      a
+        font('Proxima Nova Rg', 29px, 700, #e7333f, true)
+        
+        display block
+        margin-bottom 2px
+      p
+        font('Proxima Nova Rg', 16px, 400, #36383e)
+    .bkt
+      border 1px solid #fed750
+      border-radius 5px
+      a
+        display flex
+        align-items center
+        padding: 4px 0;
+        padding-left 12px
+        padding-bottom: 5px;
+        
+        text-decoration none
+        span
+          bgs(32px, 32px)
+          bgi('icon.svg')
+          
+          margin-right 14px
+        p
+          font('Proxima Nova Rg', 29px, 400, #4c4c4c)
+          
+          box-sizing border-box
+          width 42px
+          
+          text-align center
+          
+          border-left 1px solid #f0c945
+    .date
+      position relative
+      
+      min-width 275px
+      .date-content
+        position absolute
+        left 50%
+        z-index 10
+        
+        display flex
+        flex-direction column
+        align-items center
+        box-sizing border-box
+        width 342px
+        margin-left -171px
+        padding 33px 0
+        
+        background-color #ffffff
+        
+        border 1px solid #e4e4e4
+        
+        transform: translateY(28px);
+        &::before
+          bgs(28px, 23px)
+          bgi('triangle.png')
+          
+          content ''
+          
+          position absolute
+          top -23px
+          left 0
+          right 0
+          
+          margin auto
+        button
+          reset-button()
+          font('Proxima Nova Rg', 16px, 400, #4c4c4c)
+          
+          width 267px
+          padding: 12px 0;
+          
+          text-align center
+          
+          background-color #feda5a
+          
+          border-radius 5px
+          
+          transition 0.2s ease
+          &:hover
+            background-color #fed631
+        .time-pick
+          position relative
+          
+          margin-bottom 19px
+          
+          cursor pointer
+          .icon
+            bgs(32px, 32px)
+            bgi('time.png')
+            
+            position absolute
+            top 0
+            left 17px
+            bottom 0
+            
+            display block
+            margin auto
+          .arrow
+            bgs(16px, 16px)
+            bgi('down-arrow.svg')
+            
+            position absolute
+            top 0
+            right 12px
+            bottom 0
+            
+            display block
+            margin auto
+          input
+            reset-input()
+            font('Proxima Nova Rg', 16px, 400, #36383e)
+            placeholder('Proxima Nova Rg', 16px, 400, #36383e)
+            
+            width 267px
+            padding: 11px 0;
+            padding-bottom: 12px;
+            padding-left 60px
+            padding-right 27px
+            
+            border 1px solid #fed750
+            border-radius 5px
+            
+            cursor pointer
+        .date-pick
+          position relative
+          
+          margin-bottom 19px
+          
+          cursor pointer
+          .icon
+            bgs(32px, 32px)
+            bgi('calendar2.png')
+            
+            position absolute
+            top 0
+            left 17px
+            bottom 0
+            
+            display block
+            margin auto
+          .arrow
+            bgs(16px, 16px)
+            bgi('down-arrow.svg')
+            
+            position absolute
+            top 0
+            right 12px
+            bottom 0
+            
+            display block
+            margin auto
+          input
+            reset-input()
+            font('Proxima Nova Rg', 16px, 400, #36383e)
+            placeholder('Proxima Nova Rg', 16px, 400, #36383e)
+            
+            width 267px
+            padding: 11px 0;
+            padding-bottom: 12px;
+            padding-left 60px
+            padding-right 27px
+            
+            border 1px solid #fed750
+            border-radius 5px
+            
+            cursor pointer
+      .date-row-top
+        padding 5px 0
+        padding-left 12px
+        padding-right 10px
+        
+        border 1px solid #fed750
+        border-radius 5px
+        
+        cursor pointer
+        &.close + .date-content
+          display none
+        p
+          font('Proxima Nova Rg ', 16px, 400, #36383e)
+          
+          display flex
+          align-items center
+          &::after
+            bgs(16px, 16px)
+            bgi('down-arrow.svg')
+            
+            content ''
+
+            margin-left auto
+          &::before
+            bgs(32px, 32px)
+            bgi('calendar.svg')
+
+            content ''
+
+            margin-right 15px
+    .delivery
+      padding 5px 0
+      padding-left: 0.9%;
+      padding-right: 1.5%;
+      
+      background-color #d72939
+      
+      border-radius 5px
+      p
+        font('Proxima Nova Rg ', 16px, 400, #ffffff)
+
+        display flex
+        align-items center
+        &::before
+          bgs(32px, 32px)
+          bgi('delivery.svg')
+          
+          content ''
+          
+          margin-right 15px
+    .address
+      padding 5px 0
+      padding-left: 0.9%;
+      padding-right: 1.5%;
+      
+      border 1px solid #fed750
+      border-radius 5px
+      p
+        font('Proxima Nova Rg ', 16px, 400, #36383e)
+        
+        display flex
+        align-items center
+        &::before
+          bgs(32px, 32px)
+          bgi('placeholder.svg')
+          
+          content ''
+          
+          margin-right 22px
+    .l
+      display flex
+      align-items center
+      .img
+        width 70px
+        margin-right 15px
+      .text
+        h2
+          font('Proxima Nova Rg', 24px, 700, #d92634)
+          
+          margin-bottom 8px
+          padding-bottom 10px
+          
+          border-bottom 1px solid #fda07e
+        p
+          font('Proxima Nova Rg', 17px, 700, #f73e34)
+          
+          display flex
+          align-items center
+          &::before
+            content ''
+            
+            width 10px
+            height 10px
+            margin-right 10px
+            
+            background-color #f4403c
+            
+            border-radius 50%
+            
+@media(max-width 1720px)
+  .page-header .top .address
+    display none
+    
+@media(max-width 1360px)
+  .page-header .top .l .img
+    width: 40px;
+    margin-right: 10px;
+    
+  .page-header .top .l .text h2
+    font-size: 16px;
+    line-height: 20px;
+    padding-bottom: 2px;
+    margin-bottom: 4px;
+    
+  .page-header .top .l .text p
+    font-size: 14px;
+    line-height: 18px;
+    
+  .page-header .top .l .text p::before
+    width: 5px;
+    height: 5px;
+    margin-right: 7px;
+    
+  .page-header .top .delivery
+    padding-left: 10px;
+    padding-right: 10px;
+    
+  .page-header .top .delivery p
+    font-size: 12px;
+    line-height: 16px;
+    
+  .page-header .top .delivery p::before
+    width: 21px;
+    height: 21px;
+    background-size: 21px 21px;
+    margin-right: 8px;
+    
+  .page-header .top .date
+    min-width: 225px;
+    
+  .page-header .top .date .date-row-top p
+    font-size: 13px;
+    line-height: 17px;
+    
+  .page-header .top .date .date-row-top p::before
+    background-size: 21px 21px;
+    width: 21px;
+    height: 21px;
+    margin-right: 10px;
+    
+  .page-header .top .date .date-row-top p::after
+    background-size: 11px 13px;
+    width: 11px;
+    height: 11px;
+    
+  .page-header .top .bkt a
+    padding-left: 6px;
+    
+  .page-header .top .bkt a span
+    width: 21px;
+    height: 21px;
+    background-size: 21px 21px;
+    margin-right: 8px;
+    
+  .page-header .top .bkt a p
+    font-size: 19px;
+    line-height: 23px;
+    width: 30px;
+    
+  .page-header .top .telephone a
+    font-size: 19px;
+    line-height: 23px;
+    
+  .page-header .top .telephone p
+    font-size: 14px;
+    line-height: 18px;
+    
+@media(max-width 1080px)
+  .page-header .top
+    padding-bottom: 40px;
+  
+  .page-header .top .container
+    position: relative;
+    
+  .page-header
+    .telephone
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      left 0
+      bottom: -37px;
+      
+  .page-header .top .telephone a
+    margin-bottom: 0;
+    margin-right: 20px;
+    
+@media(max-width 1000px)
+  .page-header .top
+    padding-bottom: 10px;
+  
+  .page-header .top .container
+    padding: 0 20px;
+    
+  .page-header .top .l
+    display: none;
+    
+  .page-header .top .delivery
+    display: none;
+    
+  .page-header .top .date
+    order: 2;
+    
+  .page-header .top .date .date-content
+    padding: 12px 0;
+    width: 240px;
+    margin-left: -119px;
+    top: 23px;
+    
+  .page-header .top .date .date-content::before
+    width: 28px;
+    height: 23px;
+    background-size: 28px 14px;
+    top: -14px;
+    
+  .page-header .top .date .date-content .date-pick
+    margin-bottom: 9px;
+    
+  .page-header .top .date .date-content .date-pick .icon
+    width: 21px;
+    height: 21px;
+    background-size: 21px 21px;
+    
+  .page-header .top .date .date-content .date-pick input
+    width: 217px;
+    padding: 8px 0;
+    padding-left: 50px;
+    padding-right: 27px;
+    
+  .page-header .top .date .date-content .date-pick .arrow
+    background-size: 12px 12px;
+    width: 12px;
+    height: 12px;
+    
+  .page-header .top .date .date-content .time-pick
+    margin-bottom: 9px;
+    
+  .page-header .top .date .date-content .time-pick .icon
+    width: 21px;
+    height: 21px;
+    background-size: 21px 21px;
+    
+  .page-header .top .date .date-content .time-pick input
+    width: 217px;
+    padding: 8px 0;
+    padding-left: 50px;
+    padding-right: 27px;
+    
+  .page-header .top .date .date-content .time-pick .arrow
+    background-size: 12px 12px;
+    width: 12px;
+    height: 12px;
+    
+  .page-header .top .date .date-content button
+    width: 217px;
+    padding: 6px 0;
+    
+  .page-header .top .bkt
+    order: 3;
+    
+  .page-header .telephone
+    position: static;
+    width: auto;
+    
+  .page-header .top .telephone p
+    display: none;
+    
+  .page-header
+    padding-top: 60px;
+    
+  .page-header .top
+    position: fixed;
+    z-index: 10;
+    background-color: #ffffff;
+    width: 100%;
+    top: 0;
+    padding-top: 10px;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+    
+  .page-header .top .telephone a
+    margin-right 0
+    
+@media(max-width 530px)
+  .page-header .top .telephone a
+    font-size: 16px;
+    line-height: 20px;
+    
+@media(max-width 480px)
+  .page-header
+    padding-top: 90px;
+  
+  .page-header .top .container
+    padding 0 10px
+    
+  .page-header .top
+    padding-bottom: 42px;
+    
+  .page-header .telephone
+    position: absolute;
+    top: 38px;
+    left: 0;
+    right: 0;
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+  
+  
+  
+  
+  

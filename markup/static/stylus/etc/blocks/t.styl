@@ -1,0 +1,117 @@
+.t
+  margin-bottom 10px
+  .row
+    display flex
+    align-items center
+  h1,
+  h2
+    font('Proxima Nova Rg ', 32px, 700, #36383e)
+    
+    padding-left 15px
+  .text
+    margin-top 20px
+    p
+      font('Proxima Nova Rg', 19px , 400, #36383e)
+
+      margin-bottom 22px
+      padding-left 15px
+      &:last-child
+        margin-bottom 0
+  .disc
+    reset-list()
+    
+    display flex
+    margin-left 33px
+    li
+      font('Proxima Nova Rg', 16px, 400, #ffffff)
+      
+      display flex
+      justify-content space-between
+      align-items center
+      margin-right 16px
+      padding 5px 0
+      padding-left 8px
+      padding-right 11px
+      
+      border-radius 0 30px 30px 0
+      &::after
+        content ''
+        
+        width 10px
+        height 10px
+        margin-left 8px
+        
+        background-color #ffffff
+        
+        border-radius 50%
+      &:last-child
+        margin-right 0
+      &:nth-child(1)
+        background-color #78ce31
+      &:nth-child(2)
+        background-color #ce4326
+      &:nth-child(3)
+        background-color #2583cd
+  &--first
+    margin-bottom 20px
+  &--border
+    margin-bottom 30px
+    padding-bottom 25px
+    
+    border-bottom 1px solid #fed750
+  &--basket
+    margin-bottom 40px
+    
+@media(max-width 1670px)
+  .t .row
+    flex-direction: column;
+    h1, h2
+      padding-left: 0;
+      margin-bottom: 15px;
+      
+  .t .disc
+    margin-left: 0;
+    
+@media(max-width 610px)
+  .t .disc
+    flex-direction: column;
+    
+  .t .disc li
+    margin-right: 0;
+    margin-bottom 10px
+    &:last-child
+      margin-bottom 0
+      
+  .t--first
+    margin-bottom: 10px;
+    
+@media(max-width 480px)
+  .t h1, .t h2
+    text-align: center;
+    font-size: 19px;
+    line-height: 23px;
+    padding-left 0
+    
+  .t .disc
+    width: 100%;
+    
+  .t .text
+    margin-top: 10px;
+    
+  .t .text p
+    padding-left: 0;
+    font-size: 15px;
+    line-height: 19px;
+    margin-bottom 8px
+    
+  .t--basket
+    margin-bottom: 15px;
+    
+      
+        
+        
+        
+        
+        
+        
+        

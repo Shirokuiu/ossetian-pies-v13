@@ -1,0 +1,304 @@
+.good
+  .img
+    img
+      display block
+  &--slider
+    display flex
+    .img
+      width 250px
+    .good__content
+      flex-grow 1
+      width 50%
+      padding: 0 7px;
+      padding-top 11px
+      
+      border-top 1px solid #e4e4e4
+      border-left none
+      .bottom .add
+        width 140px
+      a
+        height: 46px;
+        overflow: hidden;
+  &--index
+    width: 22.8%;
+    display: flex;
+    flex-direction: column;
+    margin-right: 2.79%;
+    margin-bottom 46px
+    &:nth-child(4n)
+      margin-right 0
+    .good__content
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    .good__content .weight
+      margin-top auto
+    .good__content .bottom .add
+      width: 167px;
+    
+.good__content
+  padding 0 12px
+  padding-top 18px
+  padding-bottom 7px
+  
+  border 1px solid #e4e4e4
+  border-top none
+  border-radius 0 0 3px 3px
+  .bottom
+    display flex
+    justify-content space-between
+    align-items center
+    padding-left 17px
+    .price
+      font('Proxima Nova Rg', 29px, 400, #eac22b)
+      span
+        margin-left 5px
+        
+        font-size 21px
+        line-height 25px
+    .add
+      width 187px
+      height 45px
+      display flex
+      &.close
+        .add-button
+          display block
+        .calculate
+          display none
+      .calculate
+        display flex
+        width 100%
+        button
+          reset-button()
+          
+          position relative
+          
+          flex-grow 1
+          &::before,
+          &::after
+            center-absolute()
+            
+            content ''
+            
+            width 29%
+            height 2px
+            
+            background-color #4c4c4c
+          &::before
+            transform rotateZ(90deg)
+          &.minus
+            &::before
+              display none
+        p
+          font('Proxima Nova Rg', 20px ,400, #4c4c4c)
+          
+          box-sizing border-box
+          width 38px
+          
+          text-align center
+          line-height 44px
+      .add-button
+        reset-button()
+        font('Proxima Nova Rg', 16px, 400, #4c4c4c)
+        
+        display none
+        width 100%
+        padding 12px 0
+        padding-bottom 13px
+
+        text-align center
+
+        background-color #feda5a
+
+        border-radius 5px
+
+        transition 0.2s ease
+        &:hover
+          background-color #fed631
+  .weight
+    margin-bottom 5px
+    padding-top 6px
+    padding-left 7px
+    padding-bottom 8px
+    
+    border-top 1px solid #e4e4e4
+    border-bottom 1px solid #e4e4e4
+    .presons
+      font('Proxima Nova Rg', 16px, 400, #36383e)
+      
+      display flex
+      align-items center
+      &::before
+        bgs(16px, 16px)
+        bgi('user.svg')
+        
+        content ''
+        
+        margin-right 10px
+    ul
+      reset-list()
+      
+      display flex
+      align-items center
+      margin-bottom 14px
+      li
+        display flex
+        align-items center
+        margin-right 15px
+        
+        cursor pointer
+        &:last-child
+          margin-right 0
+        p
+          font('Proxima Nova Rg', 16px, 400, #36383e)
+        span
+          position relative
+          
+          box-sizing border-box
+          display block
+          width 20px
+          height 20px
+          margin-right 9px
+          
+          border 1px solid #e4e4e4
+          border-radius 2px
+          &::before
+            bgs(13px, 13px)
+            bgi('checked.svg')
+            center-absolute()
+
+            content ''
+
+            display none
+        &.active
+          span
+            background-color #fed750
+
+            border-color #fed750
+            &::before
+              display block
+  a
+    font('Proxima Nova Rg', 19px, 700, #36383e, true)
+    
+    box-sizing border-box
+    display block
+    max-width 270px
+    margin-bottom 14px
+    padding-left 7px
+    
+@media(max-width 1860px)
+  .good--slider
+    .good__content .weight ul
+      justify-content: space-between;
+    .good__content .weight ul li
+      margin-right: 0;
+    .good__content .weight ul li p
+      font-size: 13px;
+      line-height: 17px;
+      
+@media(max-width 1855px)
+  .good--index
+    margin-right: 0.79%;
+    width: 24.2%;
+    .good__content .bottom .add
+      width: 127px;
+      
+@media(max-width 1600px)
+  .good--index
+    width: 32.6%;
+    margin-bottom: 26px;
+    &:nth-child(3n)
+      margin-right 0
+    &:nth-child(4n)
+      margin-right: 0.79%;
+      
+@media(max-width 1380px)
+  .good--slider .img
+    width: 330px;
+    
+  .good--slider .good__content
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 15px;
+    
+  .good--slider .good__content a
+    max-height: 46px;
+    max-width: 440px;
+  
+  .good--slider
+    .good__content .weight
+      margin-top: auto;
+    .good__content .bottom
+      margin-top: auto;
+      
+@media(max-width 1000px)
+  .good--index
+    width: 49.5%;
+    &:nth-child(2n)
+      margin-right 0
+    &:nth-child(3n)
+      margin-right 0.79%;
+    &:nth-child(4n)
+      margin-right: 0
+    &:nth-child(6n)
+      margin-right: 0
+      
+@media(max-width 800px)
+  .good--slider .good__content
+    padding-bottom: 7px;
+    
+  .good--slider .good__content .bottom
+    padding-left: 0;
+    flex-direction: column;
+  
+  .good--slider
+    .good__content .bottom .price
+      width: 100%;
+      text-align: center;
+      margin-bottom: 2px;
+    .good__content .bottom .add .calculate button::before, .good__content .bottom .add .calculate button::after
+      width 25%
+    
+  .good--slider .good__content .bottom .add
+    width: 100%;
+      
+@media(max-width 670px)
+  .good--index
+    width: 100%;
+    margin-right 0 !important
+    .good__content .weight ul
+      justify-content: space-around;
+    .good__content .weight .presons
+      align-self: center;
+    .good__content a
+      padding-left: 0;
+      width: 100%;
+      box-sizing: border-box;
+      max-width: inherit;
+      text-align: center;
+      padding: 0 10px;
+      
+  .good--index .good__content .weight
+    display: flex;
+    flex-direction: column;
+    
+@media(max-width 480px)
+  .good--index .good__content .weight ul
+    justify-content: space-between;
+  
+  .good--index
+    .good__content .weight ul li
+      margin-right: 0;
+      
+@media(max-width 320px)
+  .good--index
+    .good__content .bottom
+      padding-left: 0;
+    
+    
+    
+    
+    
+    
+    
+    

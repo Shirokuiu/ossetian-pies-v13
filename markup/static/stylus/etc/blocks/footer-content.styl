@@ -1,0 +1,437 @@
+.footer-content
+  padding-top 30px
+  
+  background-color #2583cd
+  .row-bottom
+    padding 25px 0
+    
+    border-top 1px solid #64a1ce
+    .container
+      display flex
+      justify-content space-between
+      align-items center
+      .dev
+        a
+          display flex
+          align-items center
+          
+          text-decoration none
+          span
+            bgs(142px, 40px)
+            bgi('developers.png')
+          p
+            font('Proxima Nova Rg', 16px, 400, #6baecf)
+            
+            position relative
+            
+            margin-right 20px
+            padding-bottom 1px
+            
+            transition 0.3s ease
+            &::after
+              content ''
+              
+              position absolute
+              left 0
+              bottom 0
+              
+              width 100%
+              height 1px
+              
+              background-color #6baecf
+              
+              transition 0.3s ease
+          &:hover
+            p
+              color #ffffff
+              &::after
+                opacity 0
+      .copyright
+        display flex
+        align-items center
+        span
+          bgs(88px, 31px)
+          bgi('ym.jpg')
+          
+          margin-right 12px
+        p
+          font('Proxima Nova Rg', 16px, 400, #dfeaf0)
+  .row-top
+    display flex
+    margin-bottom 130px
+    .block-right
+      flex-grow 1
+      width 50%
+      padding-top: 55px;
+      box-sizing: border-box;
+      padding-right: 5.8%;
+      .row
+        display flex
+        justify-content space-between
+        .block
+          h3
+            font('Proxima Nova Rg', 21px, 400, #ffffff)
+            
+            margin-bottom 18px
+          ul
+            reset-list()
+            li
+              margin-bottom 19px
+              &:last-child
+                margin-bottom 0
+              a
+                font('Proxima Nova Rg', 17px, 400, #9ebacf, true)
+            
+                position relative
+
+                display inline-block
+                padding-bottom 2px
+
+                transition 0.3s ease
+                &::after
+                  content ''
+
+                  position absolute
+                  left 0
+                  bottom 0
+
+                  width 0
+                  height 1px
+
+                  background-color #ffffff
+                  
+                  opacity 0
+
+                  transition 0.3s ease
+                &:hover
+                  color #ffffff
+                  &::after
+                    width 100%
+
+                    opacity 1
+      h2
+        font('Proxima Nova Rg', 21px, 400, #ffffff)
+        
+        display flex
+        align-items center
+        margin-bottom 19px
+        &::after
+          content ''
+          
+          flex-grow 1
+          height 1px
+          margin-left 10px
+          
+          background-color #64a1ce
+      .list1
+        reset-list()
+        
+        display flex
+        margin-bottom 37px
+        li
+          margin-right: 9.4%;
+          &:last-child
+            margin-right 0
+          a
+            font('Proxima Nova Rg', 21px, 400, #9ebacf, true)
+            
+            position relative
+            
+            display inline-block
+            padding-bottom 2px
+            
+            transition 0.3s ease
+            &::after
+              content ''
+              
+              position absolute
+              left 0
+              bottom 0
+              
+              width 100%
+              height 1px
+              
+              background-color #9ebacf
+              
+              transition 0.3s ease
+            &:hover
+              color #ffffff
+              &::after
+                width 0
+                
+                opacity 0
+    .block-left
+      width 280px
+      margin-right: 4.7%;
+      .img
+        width 100px
+        margin 0 auto
+        margin-bottom 12px
+      .tit
+        font('Proxima Nova Rg', 24px, 700, #dfeaf0)
+        
+        margin-bottom 8px
+        padding-bottom 10px
+        
+        text-align center
+        
+        border-bottom 1px solid #64a1ce
+      .tit-text
+        font('Proxima Nova Rg', 17px, 700, #dfeaf0)
+        
+        position relative
+        
+        margin-bottom 30px
+        padding-left 20px
+        &::before
+          content ''
+          
+          position absolute
+          top 0
+          left 3px
+          bottom 0
+          
+          width 6px
+          height 6px
+          margin auto
+          
+          background-color #dfeaf0
+          
+          border-radius 50%
+      .tel
+        margin-bottom 20px
+        padding 12px 0
+        
+        border-top 1px solid #64a1ce
+        border-bottom 1px solid #64a1ce
+        a
+          font('Proxima Nova Rg', 29px, 700, #dfeaf0, true)
+          
+          display block
+          margin-bottom 5px
+          
+          text-align center
+        p
+          font('Proxima Nova Rg', 16px, 400, #dfeaf0)
+          
+          text-align center
+      .address
+        font('Proxima Nova Rg', 17px, 400, #dfeaf0)
+        
+        margin-bottom 18px
+        
+        text-align center
+      ul
+        reset-list()
+        
+        display flex
+        justify-content center
+        li
+          margin-right 5px
+          a
+            bgs(24px, 24px)
+            
+            text-decoration none
+            
+            background-color #ffffff
+          &:last-child
+            margin-right 0
+          &:nth-child(1)
+            a
+              bgi('vk.svg')
+          &:nth-child(2)
+            a
+              bgi('fb.svg')
+          &:nth-child(3)
+            a
+              bgi('od.svg')
+          &:nth-child(4)
+            a
+              bgi('g.svg')
+          &:nth-child(5)
+            a
+              bgi('tw.svg')
+          &:nth-child(6)
+            a
+              bgi('v.svg')
+          &:nth-child(7)
+            a
+              bgi('wa.svg')
+              
+@media(max-width 1620px)
+  .footer-content .row-top
+    margin-bottom: 40px;
+    
+  .footer-content .row-top .block-left
+    margin-right: 2.7%;
+    
+  .footer-content .row-top .block-right
+    padding-right: 0.3%;
+    padding-top: 25px;
+    
+  .footer-content .row-top .block-right .row .block h3
+    font-size: 17px;
+    line-height: 21px;
+    margin-bottom: 8px;
+    
+  .footer-content .row-top .block-right .row .block ul li
+    margin-bottom: 10px;
+    
+  .footer-content .row-top .block-right .row .block ul li a
+    font-size: 15px;
+    line-height: 19px;
+    
+@media(max-width 1400px)
+  .footer-content .row-top .block-right .row
+    flex-wrap wrap
+    
+  .footer-content .row-top .block-right .row
+    justify-content flex-start
+    
+  .footer-content .row-top .block-right .row .block
+    width 200px
+    margin-right 10px
+    margin-bottom 15px
+    
+@media(max-width 1250px)
+  .footer-content .row-top .block-right .list1
+    justify-content space-between
+    
+  .footer-content .row-top .block-right .list1 li
+    margin-right 0
+    
+@media(max-width 1000px)
+  .footer-content .row-top
+    flex-direction: column-reverse;
+    
+  .footer-content .row-top .block-right
+    padding-top: 0;
+    padding-right: 0;
+    width: 100%;
+    
+  .footer-content .row-top .block-right h2
+    &::before
+      content ''
+      
+      flex-grow 1
+      height: 1px;
+      margin-right: 10px;
+      background-color: #64a1ce;
+      
+  .footer-content .row-top .block-right .row .block
+    width: 50%;
+    margin-right: 0;
+    
+  .footer-content .row-top .block-right .row .block h3
+    text-align: center;
+    
+  .footer-content .row-top .block-right .row .block ul
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  .footer-content .row-top .block-right .row .block
+    &:last-child
+      margin-left: auto;
+      margin-right: auto;
+      
+  .footer-content .row-top
+    margin-bottom: 20px;
+    
+  .footer-content .row-top .block-left
+    margin-right: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  .footer-content .row-top .block-left .tit-text
+    margin-bottom: 10px;
+    
+  .footer-content .row-top .block-left .tel
+    margin-bottom: 8px;
+    
+@media(max-width 760px)
+  .footer-content .row-bottom .container
+    flex-direction: column-reverse;
+    
+  .footer-content .row-bottom .container .copyright
+    flex-direction: column;
+    
+  .footer-content .row-bottom .container .copyright span
+    margin-right: 0;
+    margin-bottom: 10px;
+    
+  .footer-content .row-bottom .container .dev
+    margin-bottom: 15px;
+    
+@media(max-width 600px)
+  .footer-content
+    padding-top: 10px;
+    
+  .footer-content .row-top .block-right .list1
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+    
+  .footer-content .row-top .block-right .list1 li
+    margin-bottom: 10px;
+    &:last-child
+      margin-bottom 0
+      
+@media(max-width 480px)
+  .footer-content .row-top .block-right .row
+    flex-direction: column;
+    
+  .footer-content .row-top .block-right .row .block
+    width auto
+    
+  .footer-content .row-bottom
+    padding: 10px 0;
+    
+  .footer-content .row-bottom .container .dev a
+    flex-direction: column;
+    
+  .footer-content .row-bottom .container .dev a p
+    margin-right: 0;
+    margin-bottom: 10px;
+    
+@media(max-width 320px)
+  .footer-content .row-top .block-right h2
+    text-align: center;
+    font-size: 18px;
+    line-height: 22px;
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          

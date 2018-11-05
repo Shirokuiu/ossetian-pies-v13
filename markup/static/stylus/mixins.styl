@@ -1,0 +1,137 @@
+// Mixins.
+
+reset()
+  margin 0
+  padding 0
+  
+reset-list()
+  reset()
+  
+  list-style none
+  
+reset-button()
+  reset()
+  
+  box-sizing border-box
+  
+  background-color transparent
+  
+  border none
+  outline none
+  
+font(family, size, weight, color, inline = false)
+  if inline == true
+    font-family family, sans-serif
+    font-size size
+    line-height size + 4
+    font-weight weight
+    color color
+    text-decoration none
+  else
+    reset()
+    
+    font-family family, sans-serif
+    font-size size
+    line-height size + 4
+    font-weight weight
+    color color
+  
+reset-input()
+  reset()
+  reset-button()
+  
+  display block
+  width 100%
+  
+center-absolute()
+  position absolute
+  top 0
+  left 0
+  right 0
+  bottom 0
+  
+  margin auto
+  
+exit(width, height, color, rotateB = 45, rotateA = -45)
+  &::before,
+  &::after
+    content ''
+
+    position absolute
+    top 0
+    left 0
+    right 0
+    bottom 0
+
+    width width
+    height height
+    margin auto
+
+    background-color color
+  &::before
+    transform rotate(rotateB deg)
+  &::after
+    transform rotate(rotateA deg)
+    
+hidden()
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  
+bgs(width, height)
+  display block
+  
+  width width
+  height height
+  
+  background-repeat no-repeat
+  background-size width height
+  
+  
+bgi(name)
+  background-image url('%=static=%content/' + name)
+
+placeholder(fontFamily, fontSize, fontWeight, color)
+  &::-webkit-input-placeholder
+    font-family fontFamily, sans-serif
+    color color
+    font-size fontSize
+    line-height fontSize + 4
+    font-weight fontWeight
+
+    opacity: 1
+    
+  &:-moz-input-placeholder
+    color color
+    font-size fontSize
+    line-height fontSize + 4
+    font-family fontFamily, sans-serif
+    font-weight fontWeight
+
+    opacity 1
+    
+  &::-moz-placeholder
+    color color
+    font-size fontSize
+    line-height fontSize + 4
+    font-family fontFamily, sans-serif
+    font-weight fontWeight
+
+    opacity 1
+    
+  &:-ms-input-placeholder 
+    color color
+    font-size fontSize
+    line-height fontSize + 4
+    font-family fontFamily, sans-serif
+    font-weight fontWeight
+
+    opacity 1

@@ -1,0 +1,251 @@
+.my-aside
+  width 305px
+  .information
+    box-sizing border-box
+    width 267px
+    margin 0 auto
+    margin-bottom 30px
+    padding 0 3px
+    padding-bottom 30px
+    
+    border 1px solid #e4e4e4
+    border-radius 5px
+    h2
+      font('Proxima Nova Rg', 24px, 400, #36383e)
+      
+      margin-bottom 18px
+      padding 17px 0
+      
+      text-align center
+      
+      border-bottom 1px solid #e4e4e4
+    ul
+      reset-list()
+      
+      padding-left 12px
+      li
+        margin-bottom 25px
+        &:last-child
+          margin-bottom 0
+        a
+          display flex
+          align-items center
+          
+          text-decoration none
+          span
+            display block
+            width 26px
+            height 3px
+            margin-right 12px
+            
+            background-color #fed750
+            
+            transition 0.3s ease
+          p
+            font('Proxima Nova Rg', 19px, 400, #36383e)
+            
+            transition 0.3s ease
+          &:hover
+            span
+              width 50px
+            p
+              color #ffd841
+              
+              text-decoration underline
+  .navigation
+    box-sizing border-box
+    width 267px
+    margin 0 auto
+    margin-bottom 30px
+    padding 0 3px
+    padding-bottom 30px
+    
+    border 1px solid #e4e4e4
+    border-radius 5px
+    h3
+      font('Proxima Nova Rg', 17px, 400, #a9a9a9)
+      
+      margin-bottom 19px
+      padding-left 35px
+    .list2
+      reset-list()
+      
+      padding-left 35px
+      li
+        margin-bottom 18px
+        &:last-child
+          margin-bottom 0
+        a
+          display flex
+          align-items center
+          
+          text-decoration none
+          .number
+            font('Proxima Nova Rg', 17px, 400, #75d01c)
+            
+            margin-left 5px
+          .check
+            position relative
+            
+            box-sizing border-box
+            width 20px
+            height 20px
+            margin-right 10px
+            
+            border 1px solid #e4e4e4
+            border-radius 3px
+            &::before
+              bgs(13px, 13px)
+              bgi('checked.svg')
+              center-absolute()
+              
+              content ''
+              
+              display none
+          p
+            font('Proxima Nova Rg', 17px, 400, #36383e)
+          &.active
+            .check
+              background-color #fed750
+              
+              border-color #fed750
+              &::before
+                display block
+          
+    .list1
+      reset-list()
+      
+      margin-bottom 15px
+      padding-top 25px
+      padding-left 35px
+      padding-bottom 25px
+      
+      border-bottom 1px solid #e4e4e4
+      li
+        margin-bottom 18px
+        &:last-child
+          margin-bottom 0
+        a
+          display flex
+          align-items center
+          
+          text-decoration none
+          .check
+            position relative
+            
+            box-sizing border-box
+            width 20px
+            height 20px
+            margin-right 10px
+            
+            border 1px solid #e4e4e4
+            border-radius 3px
+            &::before
+              bgs(13px, 13px)
+              bgi('checked.svg')
+              center-absolute()
+              
+              content ''
+              
+              display none
+          p
+            font('Proxima Nova Rg', 17px, 400, #36383e)
+            &.disc
+              color #f73e34
+          &.active
+            .check
+              background-color #fed750
+              
+              border-color #fed750
+              &::before
+                display block
+        &:nth-child(1)
+          a
+            .icon
+              bgs(54px, 32px)
+              bgi('aside-disc-img.jpg')
+              
+              margin-left 27px
+        &:nth-child(2)
+          a
+            .icon
+              bgs(32px, 32px)
+              bgi('new.svg')
+              
+              margin-left 19px
+              
+@media(max-width 1380px)
+  .my-aside
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 20px;
+    
+  .my-aside .navigation
+    width: auto;
+    padding-bottom: 9px;
+    
+  .my-aside .navigation .list1
+    display: flex;
+    justify-content: center;
+    
+  .my-aside .navigation .list1 li
+    margin-bottom: 0;
+    margin-right: 30px;
+    
+  .my-aside .navigation h3
+    padding-left: 0;
+    text-align: center;
+    
+  .my-aside .navigation .list2
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 10px;
+    
+  .my-aside .information
+    display: none;
+    
+  .my-aside .navigation .list2 li
+    margin-right: 20px;
+    &:last-child
+      margin-right 0
+      
+@media(max-width 480px)
+  .my-aside
+    padding 0 10px
+  
+  .my-aside .navigation
+    display: flex;
+    flex-direction: column;
+    
+  .my-aside .navigation .list1
+    flex-direction: column;
+    padding-top: 10px;
+    padding-left: 0;
+    padding-bottom: 10px;
+    align-self: center;
+    border-bottom: none;
+    margin-bottom: 0;
+    
+  .my-aside .navigation .list1 li
+    margin-right: 0;
+    
+  .my-aside .navigation h3
+    border-top: 1px solid #e4e4e4;
+    padding-top: 10px;
+    
+  .my-aside .navigation .list2
+    padding: 0;
+    flex-direction: column;
+    align-self: center;
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              

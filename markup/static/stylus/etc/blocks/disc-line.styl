@@ -1,0 +1,270 @@
+.disc-line
+  bgi('desc-line-bg.jpg')
+  
+  box-sizing border-box
+  margin-bottom 20px
+  padding-top 21px
+  padding-left: 2.39%;
+  padding-right: 4.9%;
+  padding-bottom 27px
+  
+  background-repeat no-repeat
+  background-size cover
+  background-position center center
+  .row-bottom
+    display flex
+    align-items center
+    .block-right
+      flex-grow 1
+      width 50%
+      ul
+        reset-list()
+        
+        display flex
+        justify-content space-between
+        li
+          padding 15px 0
+          padding-left 28px
+          
+          border-left 1px solid #c0c0c0
+          p
+            font('Proxima Nova Rg', 19px, 400, #ffffff)
+            
+            margin-bottom 2px
+            &:nth-child(2)
+              margin-bottom 0
+              
+              font-weight 700
+          &:nth-child(1)
+            p
+              &:nth-child(2)
+                font-weight 400
+    .block-left
+      display flex
+      justify-content space-between
+      align-items center
+      width: 32.2%;
+      margin-right: 2.75%;
+      .link
+        a
+          font('Proxima Nova Rg', 16px, 400, #4c4c4c, true)
+
+          box-sizing border-box
+          display inline-block
+          width 210px
+          padding: 13px 0;
+
+          text-align center
+
+          background-color #feda5a
+
+          border-radius 5px
+
+          transition 0.2s ease
+          &:hover
+            background-color #fed631
+      .rate
+        h3
+          font('Proxima Nova Rg', 19px, 400, #ffffff)
+          
+          margin-bottom 4px
+        a
+          font('Proxima Nova Rg', 16px, 400, #ffffff, true)
+          
+          display inline-block
+          padding-bottom 3px
+          
+          border-bottom 1px dashed #c0c0c0
+        .row
+          display flex
+          align-items center
+          margin-bottom 11px
+          span
+            font('Proxima Nova Rg', 19px, 700, #ffffff)
+          ul
+            reset-list()
+            
+            display flex
+            margin-right 10px
+            li
+              width 16px
+              height 16px
+              margin-right 7px
+              &:last-child
+                margin-right 0
+                .icon
+                  fill #c5d5c4
+              .icon
+                display block
+                width 16px
+                height 16px
+                
+                fill #f9c835
+  .row-top
+    display flex
+    justify-content space-between
+    margin-bottom 50px
+    .block-right
+      .title
+        font('Proxima Nova Rg', 32px, 700, #fffb00)
+        
+        margin-bottom 5px
+      .text
+        font('Proxima Nova Rg', 19px, 400, #ffffff)
+        
+        padding-top 6px
+        
+        border-top 1px solid #c0c0c0
+    .block-left
+      .title
+        font('Proxima Nova Rg', 32px, 700, #ffffff)
+        
+        margin-bottom 5px
+      .text
+        font('Proxima Nova Rg', 19px, 400, #ffffff)
+        
+        padding-top 6px
+        
+        border-top 1px solid #c0c0c0
+        
+@media(max-width 1670px)
+  .disc-line
+    padding-left: 18px;
+    padding-right: 18px;
+    
+  .disc-line .row-bottom .block-left
+    flex-direction: column;
+    
+  .disc-line .row-bottom .block-left .rate
+    width: 100%;
+    
+  .disc-line .row-bottom .block-left .link
+    width: 100%;
+    
+  .disc-line .row-bottom .block-left .link a
+    width: 100%;
+    padding: 8px 0;
+    
+  .disc-line .row-bottom .block-right ul li
+    padding-left: 18px;
+    
+  .disc-line .row-bottom .block-right ul li p
+    font-size: 15px;
+    line-height: 19px;
+    
+@media(max-width 1060px)
+  .disc-line
+    padding-top: 17px;
+    padding-bottom: 17px;
+    
+  .disc-line .row-top
+    flex-direction: column;
+    margin-bottom: 20px;
+    
+  .disc-line .row-top .block-left .title
+    text-align: center;
+    font-size: 27px;
+    line-height: 31px;
+    
+  .disc-line .row-top .block-left .text
+    text-align: center;
+    
+  .disc-line .row-top .block-right .title
+    text-align: center;
+    
+  .disc-line .row-top .block-right .text
+    text-align: center;
+    
+  .disc-line .row-bottom
+    flex-direction: column-reverse;
+    
+  .disc-line .row-bottom .block-left
+    margin-right: 0;
+    width: 100%;
+    
+  .disc-line .row-bottom .block-left .rate
+    margin-bottom: 15px;
+    text-align: center;
+    
+  .disc-line .row-bottom .block-left .rate h3
+    text-align: center;
+    
+  .disc-line .row-bottom .block-left .rate .row
+    justify-content: center;
+    
+  .disc-line .row-bottom .block-right
+    flex-grow: 0;
+    width: 100%;
+    margin-bottom: 20px;
+    
+@media(max-width 750px)
+  .disc-line .row-bottom .block-right ul
+    flex-direction: column;
+    
+  .disc-line .row-bottom .block-right ul li
+    border-left: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin-bottom: 10px;
+    &:last-child
+      margin-bottom 0
+      
+  .disc-line .row-bottom .block-right ul li p
+    &:nth-child(1)
+      margin-bottom: 0;
+      margin-right: 10px;
+      
+  .disc-line .row-top
+    margin-bottom: 10px;
+    
+  .disc-line .row-top .block-left
+    margin-bottom: 10px;
+    
+  .disc-line .row-top .block-right .title
+    margin-bottom: 10px;
+    
+  .disc-line .row-top .block-right .text
+    border-bottom: 1px solid #c0c0c0;
+    padding-top: 0;
+    padding-bottom: 5px;
+    border-top none
+    
+  .disc-line .row-bottom .block-right
+    margin-bottom: 10px;
+    
+@media(max-width 480px)
+  .disc-line
+    padding-top: 7px;
+    padding-bottom: 10px;
+    
+  .disc-line .row-top .block-left .title
+    font-size: 22px;
+    line-height: 26px;
+    
+  .disc-line .row-top .block-left .text
+    font-size: 16px;
+    line-height: 20px;
+    
+  .disc-line .row-top .block-right .title
+    font-size: 24px;
+    line-height: 28px;
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        

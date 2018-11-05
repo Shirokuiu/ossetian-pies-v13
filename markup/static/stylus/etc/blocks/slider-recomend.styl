@@ -1,0 +1,119 @@
+.slider-recomend
+  margin-bottom 32px
+  .slider
+    position relative
+    .owl-stage-outer
+      &::before
+        content ''
+        
+        position absolute
+        top 0
+        right 0
+        bottom 0
+        z-index 10
+        
+        width 131px
+        margin auto
+        
+        background-image linear-gradient(to left, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0))
+    .owl-stage
+      padding-left 0 !important
+    .owl-nav
+      position absolute
+      top 0
+      left: -15px;
+      right: 20px;
+      bottom 0
+
+      display flex
+      justify-content space-between
+      height 1px
+      margin auto
+    .owl-prev,
+    .owl-next
+      position relative
+      
+      top -27px
+      width 50px
+      height 50px
+
+      background #fed750 !important
+
+      border-radius 50% !important
+      span
+        center-absolute()
+        bgs(24px, 24px)
+        bgi('down-arrow2.svg')
+
+        display block
+
+        transform rotateZ(90deg)
+        &::before,
+        &::after
+          display none
+      &:hover
+        background #fed750 !important
+    .owl-prev
+      &.disabled
+        background #f2f2f7 !important
+        
+@media(max-width 729px)
+  .slider-recomend .slider .owl-stage-outer::before
+    display none
+    
+  .slider-recomend
+    margin-bottom: 12px;
+    
+  .slider-recomend .slider .owl-nav
+    position: static;
+    margin-top: 17px;
+    justify-content: space-around;
+    height: auto;
+    
+  .slider-recomend .slider .owl-prev, .slider-recomend .slider .owl-next
+    top: 0;
+    
+@media(max-width 580px)
+  .good--slider
+    flex-direction: column;
+    
+  .good--slider .img
+    width: 100%;
+    
+  .good--slider .good__content
+    flex-grow: 0;
+    width: 100%;
+    box-sizing: border-box;
+    border-left 1px solid #e4e4e4;
+    
+  .good--slider .good__content a
+    max-width: inherit;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 10px;
+    text-align: center;
+    max-height: inherit;
+    height: auto;
+    overflow: auto;
+    
+  .good--slider .good__content .weight
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+  
+  .good--slider  
+    .good__content .weight .presons
+      margin-left: auto;
+      margin-right: auto;
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      

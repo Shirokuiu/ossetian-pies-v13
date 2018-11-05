@@ -1,0 +1,325 @@
+.my-basket
+  box-sizing border-box
+  width 267px
+  margin 0 auto
+  margin-bottom 30px
+  padding 0 3px
+  padding-bottom 24px
+  
+  box-shadow: 0px 0px 11px 4px rgba(0,0,0,0.05)
+
+  border-radius 5px
+  
+.my-basket__title
+  font('Proxima Nova Rg', 24px, 400, #36383e)
+  
+  padding-top 18px
+  
+  text-align center
+  
+.my-basket__content
+  overflow-y scroll
+  box-sizing border-box
+  max-height 423px
+  margin-top 15px
+  padding-top 10px
+  padding-bottom 12px
+  
+  border-top 1px solid #e4e4e4
+  border-bottom 1px solid #e4e4e4
+  
+.my-basket__content-cont
+  position relative
+  .count
+    font('Proxima Nova Rg', 16px, 400, #ffffff)
+    
+    position absolute
+    top: -41px;
+    right: 10px;
+    
+    display block
+    width 25px
+    height 25px
+    
+    text-align center
+    line-height 25px
+    
+    background-color #feda5a
+    
+    border-radius 50%
+  &.close
+    display none
+  
+.my-basket__cart
+  display flex
+  flex-direction column
+  margin-bottom 10px
+  padding 0 15px
+  padding-bottom 15px
+  
+  border-bottom 1px solid #e4e4e4
+  &:last-child
+    margin-bottom 0
+    padding-bottom 0
+    
+    border-bottom none
+  .exit
+    reset-button()
+    
+    position relative
+    
+    width 20px
+    height 20px
+    margin-left auto
+    margin-bottom 5px
+    
+    exit(110%, 2px, #e4e4e4)
+  
+  
+.my-basket__cart-title
+  font('Proxima Nova Rg', 16px, 400, #36383e)
+  
+  margin-bottom 12px
+  
+.my-basket__cart-row
+  display flex
+  align-items center
+  
+.my-basket__calc
+  display flex
+  box-sizing border-box
+  width 107px
+  height 38px
+  margin-right 12px
+  padding 3px 0
+  
+  background-color #fed750
+  
+  border-radius 9px
+  button
+    reset-button()
+    
+    position relative
+    
+    flex-grow 1
+    
+    border-radius 0 9px 9px 0
+    &::before,
+    &::after
+      center-absolute()
+      
+      content ''
+      
+      width 50%
+      height 1px
+      
+      background-color #fff4cd
+    &::before
+      transform rotate(90deg)
+    &:active
+      background-color #fed631
+    &.minus
+      border-radius 9px 0 0 9px
+      &::before
+        display none
+  p
+    font('Proxima Nova Rg', 20px, 400, #4c4c4c)
+    
+    box-sizing border-box
+    width 38px
+    
+    text-align center
+    line-height 34px
+    
+    border-left 1px solid #ffffff
+    border-right 1px solid #ffffff
+    
+.my-basket__price
+  font('Proxima Nova Rg', 24px, 400, #eac22b)
+  span
+    margin-left 5px
+    
+    font-size 21px
+    line-height 25px
+    
+.my-basket__total
+  padding 0 11px
+  padding-top 10px
+    
+.my-basket__total-title
+  display flex
+  justify-content space-between
+  align-items center
+  margin-bottom 17px
+  h3
+    font('Proxima Nova Rg', 24px, 400, #36383e)
+  p
+    font('Proxima Nova Rg', 24px, 400, #eac22b)
+    span
+      margin-left 5px
+      
+      font-size 21px
+      line-height 25px
+      
+.my-basket__total-order
+  a
+    font('Proxima Nova Rg', 16px, 400, #ffffff, true)
+    
+    display block
+    width 100%
+    padding 12px 0
+    padding-bottom 13px
+    
+    text-align center
+    
+    background-color #78ce31
+    
+    border-radius 7px
+    
+    transition 0.2s ease
+    &:hover
+      background-color #fed631
+  .time-pick
+    position relative
+
+    margin-bottom 19px
+
+    cursor pointer
+    .icon
+      bgs(32px, 32px)
+      bgi('time.png')
+
+      position absolute
+      top 0
+      left 17px
+      bottom 0
+
+      display block
+      margin auto
+    .arrow
+      bgs(16px, 16px)
+      bgi('down-arrow.svg')
+
+      position absolute
+      top 0
+      right 12px
+      bottom 0
+
+      display block
+      margin auto
+    input
+      reset-input()
+      font('Proxima Nova Rg', 16px, 400, #36383e)
+      placeholder('Proxima Nova Rg', 16px, 400, #36383e)
+
+      width 100%
+      padding: 11px 0;
+      padding-bottom: 12px;
+      padding-left 60px
+      padding-right 27px
+
+      border 1px solid #fed750
+      border-radius 5px
+
+      cursor pointer
+  .date-pick
+    position relative
+
+    margin-bottom 19px
+
+    cursor pointer
+    .icon
+      bgs(32px, 32px)
+      bgi('calendar2.png')
+
+      position absolute
+      top 0
+      left 17px
+      bottom 0
+
+      display block
+      margin auto
+    .arrow
+      bgs(16px, 16px)
+      bgi('down-arrow.svg')
+
+      position absolute
+      top 0
+      right 12px
+      bottom 0
+
+      display block
+      margin auto
+    input
+      reset-input()
+      font('Proxima Nova Rg', 16px, 400, #36383e)
+      placeholder('Proxima Nova Rg', 16px, 400, #36383e)
+
+      width 100%
+      padding: 11px 0;
+      padding-bottom: 12px;
+      padding-left 60px
+      padding-right 27px
+
+      border 1px solid #fed750
+      border-radius 5px
+
+      cursor pointer
+      
+.my-basket__empty
+  margin-top 12px
+  .img
+    width 64px
+    margin 0 auto
+    margin-bottom 15px
+  p
+    font('Proxima Nova Rg', 17px, 400, #c0c0c0)
+    
+    width: 145px;
+    margin: 0 auto;
+    
+    text-align center
+  &.close
+    display none
+    
+@media(max-width 1380px)
+  .my-basket
+    width: 80%;
+    
+  .my-basket__content
+    max-height: 481px;
+    
+  .my-basket__cart-title
+    text-align: center;
+    
+  .my-basket__cart-row
+    justify-content: center;
+    
+  .my-basket__cart
+    position: relative;
+    
+  .my-basket__cart .exit
+    margin: 0;
+    position: absolute;
+    right: 20px;
+    
+@media(max-width 750px)
+  .my-basket
+    width: 100%;
+    box-sizing: border-box;
+    
+@media(max-width 480px)
+  .my-basket__content
+    max-height: 232px;
+    
+  .my-basket__cart .exit
+    position: relative;
+    right: auto;
+    margin-left: auto;
+  
+  
+  
+  
+  
+  
+  

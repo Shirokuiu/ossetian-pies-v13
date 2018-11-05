@@ -1,0 +1,279 @@
+doctype html
+html(class="no-js", lang="ru")
+  include ../components/head/head.pug
+  include ../components/img/img.pug
+  head
+    +head(head.defaults)
+  body.page
+    |%=symbols=%
+
+    .wrapper
+      .content
+        header.page-header
+          div.top
+            .container
+              div.l
+                div.img
+                  +img('pizza.svg')
+                div.text
+                  h2 ОСЕТИНСКИЕ ПИРОГИ
+                  p Срочная доставка по Москве
+              div.address
+                p Москва и Московская  область
+              div.delivery
+                p Доставка по Москве от 30 минут
+              div.date
+                div.date-row-top.close
+                  p Дата и время доставки
+                div.date-content
+                  div.date-pick
+                    span.icon
+                    input(type="text" placeholder="Выберите дату" readonly)
+                    span.arrow
+                  div.time-pick
+                    span.icon
+                    input.timepicker(type="text" placeholder="Выберите время" readonly)
+                    span.arrow
+                  button(type="button") Подтвердить
+              div.bkt
+                a(href="#")
+                  span
+                  p 6
+              div.telephone
+                a(href="tel:74951001510") +7 (495) 100-15-10
+                p Звоните Пн-Вс с 9:00 до 21:00
+        main.page-content
+          nav
+            .nav-slider
+              .nav-slider__content.owl-carousel.owl-theme.reset-owl
+                - for (let i = 0; i < 2; i++)
+                  each items in [{text:'С говядиной',span:'12',status:true},{text:'С капустой',span:'6',status:false},{text:'С сыром',span:'5',status:false},{text:'С курицей',span:'5',status:false},{text:'С картошкой',span:'5',status:false},{text:'С семгой',span:'5',status:false},{text:'С овощами',span:'5',status:false},{text:'С зеленью',span:'5',status:false},{text:'Постные',span:'5',status:false},{text:'Сладкие',span:'5',status:false}]
+                    if items.status
+                      .nav-slider__slide
+                        a.active(href="#")= items.text
+                          span= items.span
+                    else
+                      .nav-slider__slide
+                        a(href="#")= items.text
+                          span= items.span
+          .bread
+            .container
+              ul
+                li
+                  a(href="#") Главная
+                  span /
+                li
+                  a(href="#") Осетинские пироги
+          .page-content__row
+            .page-content__desc
+              .t.t--first
+                div.row
+                  h1 Осетинские пироги с доставкой по Москве
+                  ul.disc
+                    each items in ['-10% в День рождения','Скидки до 15%','Бесплатная доставка']
+                      li= items
+              .disc-line
+                div.row-top
+                  div.block-left
+                    p.title Традиции Осетии
+                    p.text Доставка осетинских пирогов домой и в офис
+                  div.block-right
+                    p.title Акция! В день рождения скидка 10%*
+                    p.text * Скидка действительна 5 дней до и после
+                div.row-bottom
+                  div.block-left
+                    div.rate
+                      h3 Рейтинг
+                      div.row
+                        ul
+                          - for (let i = 0; i < 4; i++)
+                            li
+                              != pugHelpers.Icon.call(locals, {iconName: 'star', className: 'icon'})
+                          li
+                            != pugHelpers.Icon.call(locals, {iconName: 'star-stroke', className: 'icon'})
+                        span 4.0
+                      a(href="#") 150 оценок, 30 отзывов
+                    div.link
+                      a(href="#") Купить пироги
+                  div.block-right
+                    ul
+                      each items in [['Настоящие','Осетинские пироги'],['Доставка по Москве','за 30 минут'],['Бесплатная доставка','от 1 000 руб.'],['Время работы:','Пн-Вс с 9:00 до 21:00']]
+                        li
+                          each item in items
+                            p= item
+              .t
+                h2 Рекомендуем
+              .slider-recomend
+                div.slider.owl-carousel.owl-theme.reset-owl
+                  - for (let i = 0; i < 4; i++)
+                    div.slider-slide
+                      .good.good--slider
+                        div.img
+                          +img('good-img.jpg')
+                        .good__content
+                          a(href="#") Осетинский пирог с бараниной и помидорами
+                          div.weight
+                            ul
+                              li.active
+                                span
+                                p 1 000 г
+                              li
+                                span
+                                p 1 200 г
+                              li
+                                span
+                                p 1 400 г
+                            p.presons На 3-5 персон
+                          div.bottom
+                            p.price 750
+                              span руб.
+                            .add.close
+                              button.add-button(type="button") В корзину
+                              .calculate
+                                button.minus(type="button")
+                                p 1
+                                button.plus(type="button")
+              .t
+                h2 Осетинские пироги с бесплатной доставкой
+              .carts-container
+                .carts-container__nav
+                  div.reset
+                    a(href="#")
+                      span
+                      p Сбросить фильтр
+                  div.filters
+                    h3 Сортировать:
+                    ul
+                      each items in [{text:'По возрастанию цены',active:true},{text:'По убыванию цены',active:false},{text:'Самые популярные',active:false},{text:'Самые популярные',active:false}]
+                        li
+                          a(href="#" class="" + (items.active ? 'active' : ''))= items.text
+                .carts-container__row
+                  - for (let i = 0; i < 8; i++)
+                    .good.good--index
+                      div.img
+                        +img('good-img.jpg')
+                      .good__content
+                        a(href="#") Осетинский пирог с бараниной и помидорами
+                        div.weight
+                          ul
+                            li.active
+                              span
+                              p 1 000 г
+                            li
+                              span
+                              p 1 200 г
+                            li
+                              span
+                              p 1 400 г
+                          p.presons На 3-5 персон
+                        div.bottom
+                          p.price 750
+                            span руб.
+                          .add.close
+                            button.add-button(type="button") В корзину
+                            .calculate
+                              button.minus(type="button")
+                              p 1
+                              button.plus(type="button")
+                a.more(href="#") Показать еще 12
+              .t
+                h2 Осетинские пироги с бесплатной доставкой
+                div.text
+                  p Горячие свежеиспеченные пироги у вас дома или в офисе всего через 1-1,5 часа после оформления заказа. Вы можете оформить заказ, выбрав на сайте пироги по представленным фото осетинских пирогов из нашего меню или оформить заказ через операторов по телефону: 8 (495) 781-40-44.
+                  p Осетинская культура предлагает ряд традиций, сопутствующих приготовлению еды, во многом отличных от обрядов других культур. Издавна осетинские пироги были одним из основным блюдом на столе осетин. Традиционно подается три осетинских пирога, что символизирует три природных стихии: солнце, воду и землю.
+                  p Мы готовим пироги в соответствии со старинными традиционными рецептами и с использованием только лучших экологически чистых продуктов.
+                    
+            aside.my-aside
+              div.navigation
+                ul.list1
+                  li
+                    a(href="#")
+                      span.check
+                      p.disc Акции
+                      span.icon
+                  li
+                    a.active(href="#")
+                      span.check
+                      p Новинки
+                      span.icon
+                h3 Осетинские пироги
+                ul.list2
+                  each items in [{text:'С говядиной',num:'12',active:true},{text:'С капустой',num:'6',active:false},{text:'С сыром',num:'5',active:false},{text:'С курицей',num:'5',active:false},{text:'С картошкой',num:'5',active:false},{text:'С семгой',num:'5',active:false},{text:'С овощами',num:'5',active:false},{text:'С зеленью',num:'5',active:false},{text:'Постные',num:'5',active:false},{text:'Сладкие',num:'5',active:false}]
+                    li
+                      a(href="#" class="" + (items.active ? 'active' : ''))
+                        span.check
+                        p= items.text
+                        span.number= '(' + items.num + ')'
+              div.information
+                h2 Информация
+                ul
+                  each items in ['О компании','Доставка','Оплата','Фотогалерея','Контакты']
+                    li
+                      a(href="#")
+                        span
+                        p= items
+                
+          .page-content__list
+            .container
+              .t
+                h2 Закажите осетинские пироги:
+              .row
+                - for (let i = 0; i < 2; i++)
+                  each items in [['В офис','На дом','На день рождения'],['На Новый год','На торжество','На юбилей']]
+                    ul
+                      each item in items
+                        li
+                          a(href="#")
+                            p= item
+        
+      footer.page-footer
+        .footer-content
+          .container
+            div.row-top
+              div.block-left
+                div.img
+                  +img('pizza-footer.jpg')
+                h2.tit ОСЕТИНСКИЕ ПИРОГИ
+                p.tit-text Срочная доставка по Москве
+                div.tel
+                  a(href="tel:74951001510") +7 (495) 100-15-10
+                  p Звоните: Пн-Вс, 9:00-21:00 МСК
+                p.address Москва, Большой Каретный, 2
+                ul
+                  - for (let i = 0; i < 7; i++)
+                    li
+                      a(href="#")
+              div.block-right
+                ul.list1
+                  each items in ['О компании','Доставка','Оплата','Фотогалерея','Контакты']
+                    li
+                      a(href="#")= items
+                h2 Популярные осетинские пироги
+                div.row
+                  each items in ['С говядиной','С сыром','С курицей','С капустой','Сладкие']
+                    div.block
+                      h3= items
+                      ul
+                        each item in ['С говядиной','С говядиной и сыром','С говядиной и кабачком','С говядиной и капустой','С говядиной и помидорами']
+                          li
+                            a(href='#')= item
+          div.row-bottom
+            .container
+              div.copyright
+                span
+                p © 2018 Осетинские пироги
+              div.dev
+                a(href='#')
+                  p Создание и продвижение сайтов
+                  span
+
+    script(src='%=static=%js/separate-js/svg4everybody.min.js')
+    script svg4everybody();
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+    script(src='%=static=%js/separate-js/owl.carousel.min.js')
+    script(src='%=static=%js/separate-js/datepicker.js')
+    script(src='%=static=%js/separate-js/datepicker.ru-RU.js')
+    script(src='%=static=%js/separate-js/jquery.timepicker.min.js')
+
+    //- Main scripts. You can replace it, but I recommend you to leave it here
+    script(src='%=static=%js/main%=hash=%%=min=%.js')

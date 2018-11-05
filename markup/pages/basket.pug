@@ -1,0 +1,196 @@
+doctype html
+html(class="no-js", lang="ru")
+  include ../components/head/head.pug
+  include ../components/img/img.pug
+  head
+    +head(head.defaults)
+  body.page
+    |%=symbols=%
+
+    .wrapper
+      .content
+        header.page-header
+          div.top
+            .container
+              div.l
+                div.img
+                  +img('pizza.svg')
+                div.text
+                  h2 ОСЕТИНСКИЕ ПИРОГИ
+                  p Срочная доставка по Москве
+              div.address
+                p Москва и Московская  область
+              div.delivery
+                p Доставка по Москве от 30 минут
+              div.date
+                div.date-row-top.close
+                  p Дата и время доставки
+                div.date-content
+                  div.date-pick
+                    span.icon
+                    input(type="text" placeholder="Выберите дату" readonly)
+                    span.arrow
+                  div.time-pick
+                    span.icon
+                    input.timepicker(type="text" placeholder="Выберите время" readonly)
+                    span.arrow
+                  button(type="button") Подтвердить
+              div.bkt
+                a(href="#")
+                  span
+                  p
+              div.telephone
+                a(href="tel:74951001510") +7 (495) 100-15-10
+                p Звоните Пн-Вс с 9:00 до 21:00
+        main.page-content
+          nav
+            .nav-slider
+              .nav-slider__content.owl-carousel.owl-theme.reset-owl
+                - for (let i = 0; i < 2; i++)
+                  each items in [{text:'С говядиной',span:'12',status:true},{text:'С капустой',span:'6',status:false},{text:'С сыром',span:'5',status:false},{text:'С курицей',span:'5',status:false},{text:'С картошкой',span:'5',status:false},{text:'С семгой',span:'5',status:false},{text:'С овощами',span:'5',status:false},{text:'С зеленью',span:'5',status:false},{text:'Постные',span:'5',status:false},{text:'Сладкие',span:'5',status:false}]
+                    if items.status
+                      .nav-slider__slide
+                        a.active(href="#")= items.text
+                          span= items.span
+                    else
+                      .nav-slider__slide
+                        a(href="#")= items.text
+                          span= items.span
+          .bread
+            .container
+              ul
+                li
+                  a(href="#") Главная
+                  span /
+                li
+                  a(href="#") Корзина
+          .page-content__row
+            .page-content__desc
+              .t.t--basket
+                h1 Ваша корзина
+              .inner-basket
+                .inner-basket__table
+                  ul.title
+                    each items in ['Наименование','Цена','Колличество','Стоимость']
+                      li
+                        p= items
+                  ul.items
+                    - for (let i = 0; i < 5; i ++)
+                      li
+                        h3 Осетинский пирог с бараниной и помидорами
+                        p.price 750
+                          span руб.
+                        .calculate-wrap
+                          .calculate
+                            button.minus(type="button")
+                            p.val 1
+                            button.plus(type="button")
+                        .total
+                          p
+                            span руб.
+                        button.exit(type="button")
+                  div.sum
+                    h2 Итого к оплате:
+                    p
+                      span руб.
+                .inner-basket__order
+                  h2 Введите данные по заказу
+                  form.basket-form(action="action.php" method="post")
+                    div.row
+                      div.block-input
+                        each items in [[{type:'text',placeholder:'Введите имя',textarea:false},{type:'tel',placeholder:'Введите телефон',textarea:false},{type:'text',placeholder:'Адрес доставки',textarea:false}],[{type:'text',placeholder:'Выберите дату',textarea:false},{type:'text',placeholder:'Выберите время',textarea:false},{placeholder:'Комментарий к заказу',textarea:true}]]
+                          ul
+                            each item in items
+                              li
+                                if !(item.textarea)
+                                  input(type="" + item.type placeholder="" + item.placeholder required)
+                                else
+                                  textarea(placeholder="" + item.placeholder)
+                                span
+                      div.subm
+                        button(type="submit") Отправить заявку
+                    .privacy
+                      input(type="checkbox" checked required)
+                      span
+                      p Настоящим подтверждаю, что я ознакомлен и согласен с условиями политики обработки
+                        a(href="#") персональных данных
+            aside.my-aside
+              div.navigation
+                ul.list1
+                  li
+                    a(href="#")
+                      span.check
+                      p.disc Акции
+                      span.icon
+                  li
+                    a.active(href="#")
+                      span.check
+                      p Новинки
+                      span.icon
+                h3 Осетинские пироги
+                ul.list2
+                  each items in [{text:'С говядиной',num:'12',active:true},{text:'С капустой',num:'6',active:false},{text:'С сыром',num:'5',active:false},{text:'С курицей',num:'5',active:false},{text:'С картошкой',num:'5',active:false},{text:'С семгой',num:'5',active:false},{text:'С овощами',num:'5',active:false},{text:'С зеленью',num:'5',active:false},{text:'Постные',num:'5',active:false},{text:'Сладкие',num:'5',active:false}]
+                    li
+                      a(href="#" class="" + (items.active ? 'active' : ''))
+                        span.check
+                        p= items.text
+                        span.number= '(' + items.num + ')'
+              div.information
+                h2 Информация
+                ul
+                  each items in ['О компании','Доставка','Оплата','Фотогалерея','Контакты']
+                    li
+                      a(href="#")
+                        span
+                        p= items
+      footer.page-footer
+        .footer-content
+          .container
+            div.row-top
+              div.block-left
+                div.img
+                  +img('pizza-footer.jpg')
+                h2.tit ОСЕТИНСКИЕ ПИРОГИ
+                p.tit-text Срочная доставка по Москве
+                div.tel
+                  a(href="tel:74951001510") +7 (495) 100-15-10
+                  p Звоните: Пн-Вс, 9:00-21:00 МСК
+                p.address Москва, Большой Каретный, 2
+                ul
+                  - for (let i = 0; i < 7; i++)
+                    li
+                      a(href="#")
+              div.block-right
+                ul.list1
+                  each items in ['О компании','Доставка','Оплата','Фотогалерея','Контакты']
+                    li
+                      a(href="#")= items
+                h2 Популярные осетинские пироги
+                div.row
+                  each items in ['С говядиной','С сыром','С курицей','С капустой','Сладкие']
+                    div.block
+                      h3= items
+                      ul
+                        each item in ['С говядиной','С говядиной и сыром','С говядиной и кабачком','С говядиной и капустой','С говядиной и помидорами']
+                          li
+                            a(href='#')= item
+          div.row-bottom
+            .container
+              div.copyright
+                span
+                p © 2018 Осетинские пироги
+              div.dev
+                a(href='#')
+                  p Создание и продвижение сайтов
+                  span
+
+    script(src='%=static=%js/separate-js/svg4everybody.min.js')
+    script svg4everybody();
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+    script(src='%=static=%js/separate-js/owl.carousel.min.js')
+    script(src='%=static=%js/separate-js/datepicker.js')
+    script(src='%=static=%js/separate-js/datepicker.ru-RU.js')
+    script(src='%=static=%js/separate-js/jquery.timepicker.min.js')
+
+    //- Main scripts. You can replace it, but I recommend you to leave it here
+    script(src='%=static=%js/main%=hash=%%=min=%.js')

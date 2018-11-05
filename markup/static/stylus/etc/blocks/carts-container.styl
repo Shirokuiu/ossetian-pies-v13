@@ -1,0 +1,193 @@
+.carts-container
+  margin-bottom 28px
+  padding-bottom 35px
+  
+  border-bottom 1px solid #fed750
+  .more
+    font('Proxima Nova Rg', 19px, 400, #4c4c4c, true)
+    
+    box-sizing border-box
+    display block
+    width 195px
+    margin 0 auto
+    padding 10px 0
+    
+    text-align center
+    
+    border 2px solid #feda5a
+    border-radius 9px
+    
+    transition 0.2s ease
+    &:hover
+      background-color #feda5a
+
+.carts-container__nav
+  display flex
+  align-items center
+  margin-bottom 17px
+  padding 12px 22px
+  
+  border-top 1px solid #e4e4e4
+  border-bottom 1px solid #e4e4e4
+  .filters
+    flex-grow 1
+    display flex
+    align-items center
+    width 50%
+    h3
+      font('Proxima Nova Rg', 21px, 700, #36383e)
+      
+      margin-right 15px
+    ul
+      reset-list()
+      
+      flex-grow 1
+      display flex
+      width 50%
+      li
+        margin-right: 2%;
+        &:last-child
+          margin-right 0
+        a
+          font('Proxima Nova Rg', 17px, 400, #36383e, true)
+          
+          display block
+          padding 10px 30px
+          
+          text-align center
+          
+          background-color #eeeef7
+          
+          border-radius 5px
+          
+          transition 0.2s ease
+          &:hover
+            color #ffffff
+            
+            background-color #7fba28
+          &.active
+            color #ffffff
+            
+            background-color #7fba28
+  .reset
+    margin-right: 4.7%;
+    a
+      display flex
+      align-items center
+      
+      text-decoration none
+      span
+        position relative
+
+        display block
+        width 25px
+        height 25px
+        margin-right 11px
+
+        exit(100%, 2px, #fc381d)
+      p
+        font('Proxima Nova Rg', 17px, 400, #555555)
+        
+        position relative
+        
+        padding-bottom 1px
+        
+        transition 0.3s ease
+        &::after
+          content ''
+          
+          position absolute
+          left 0
+          bottom 0
+          
+          width 100%
+          height 1px
+          
+          background-color #555555
+          
+          transition 0.3s ease
+      &:hover
+        p
+          color #ff5900
+          &::after
+            width 0
+
+            opacity 0
+            
+.carts-container__row
+  display flex
+  flex-wrap wrap
+  
+@media(max-width 1700px)
+  .carts-container__nav .reset
+    align-self: flex-end;
+    transform: translateY(-12px);
+    margin-right: 1.7%;
+    
+  .carts-container__nav .filters
+    flex-direction: column;
+    
+  .carts-container__nav .filters h3
+    margin-right: 0;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+    
+  .carts-container__nav .filters ul
+    width: 100%;
+    justify-content: space-between;
+    
+  .carts-container__nav .filters ul li
+    margin-right: 0;
+    
+@media(max-width 1170px)
+  .carts-container__nav
+    flex-direction: column-reverse;
+    padding: 12px;
+    
+  .carts-container__nav .reset
+    margin-right: 0;
+    transform: translateY(0);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+  .carts-container__nav .filters
+    flex-grow: 0;
+    width: 100%;
+    margin-bottom: 15px;
+    
+@media(max-width 945px)
+  .carts-container__nav .filters ul li a
+    font-size: 14px;
+    line-height: 18px;
+    
+@media(max-width 840px)
+  .carts-container__nav .filters ul
+    flex-direction: column;
+    
+  .carts-container__nav .filters ul li
+    margin-bottom: 10px;
+    &:last-child
+      margin-bottom 0
+      
+@media(max-width 480px)
+  .carts-container
+    margin-bottom: 18px;
+    padding-bottom: 25px;
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+            
+            
+            

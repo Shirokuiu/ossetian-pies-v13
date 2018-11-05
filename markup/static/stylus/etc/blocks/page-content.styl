@@ -1,0 +1,159 @@
+.page-content__row
+  display flex
+  flex-direction row-reverse
+
+.page-content__desc
+  flex-grow 1
+  box-sizing border-box
+  width 50px
+  padding-right 40px
+  
+.page-content__list
+  bgi('page-content-list-bg.jpg')
+  
+  box-sizing border-box
+  padding-top 8px
+  min-height 350px
+  
+  background-repeat no-repeat
+  .container
+    padding-left 305px
+  .row
+    display flex
+    justify-content space-around
+    margin-top 57px
+    ul
+      reset-list()
+      li
+        margin-bottom 25px
+        &:last-child
+          margin-bottom 0
+        a
+          position relative
+          
+          display block
+          
+          text-decoration none
+          &::before
+            content ''
+            
+            position absolute
+            top 0
+            left 0
+            bottom 0
+            
+            width 25px
+            height 3px
+            margin auto
+            
+            background-color #fed750
+            
+            transition 0.3s ease
+          p
+            font('Proxima Nova Rg', 19px, 400, #36383e)
+            
+            transform translateX(37px)
+            
+            transition 0.3s ease
+          &:hover
+            &::before
+              width 50px
+            p
+              color #ffd841
+              
+              text-decoration underline
+              
+              transform translateX(62px)
+              
+@media(max-width 1670px)
+  .page-content__desc
+    padding-right: 20px;
+    
+@media(max-width 1380px)
+  .page-content__row
+    flex-direction: column;
+    
+  .page-content__desc
+    flex-grow: 0;
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 20px;
+    
+  .page-content__list
+    min-height: auto;
+    padding-bottom: 70px;
+  
+  .page-content__list .container
+    padding-left: 20px;
+    
+  .page-content__list .row
+    margin-top: 27px;
+    justify-content: flex-start;
+    
+  .page-content__list .row ul
+    margin-right: 11%;
+    &:last-child
+      margin-right 0
+      
+@media(max-width 1110px)
+  .page-content__list
+    padding-bottom: 0px;
+    
+  .page-content__list .row
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 17px;
+    
+  .page-content__list .row ul
+    margin-right: 0;
+    margin-bottom: 20px;
+    width: 34%;
+    
+  .page-content__list .row ul li
+    margin-bottom: 15px;
+    
+@media(max-width 660px)
+  .page-content__list .row
+    flex-direction: column;
+    align-items: center;
+    
+  .page-content__list .row ul
+    width: 250px;
+    
+@media(max-width 480px)
+  .page-content__list .row ul
+    width: 100%;
+    
+  .page-content__list .row ul li a p
+    transform: translateX(0);
+    text-align: center;
+    
+  .page-content__list .row ul li a::before
+    display none
+    
+  .page-content__list .row ul li a:hover p
+    transform: translateX(0);
+    
+  .page-content__desc
+    padding-left 10px
+    padding-right 10px
+    
+  .page-content__list .container
+    padding-left 10px
+    padding-right 10px
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+            
+            
+            
+            
+            
